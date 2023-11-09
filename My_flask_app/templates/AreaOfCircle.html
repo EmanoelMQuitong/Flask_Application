@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+        <title> MyWebsite - Pyflask Introduction To Website</title>
+        <link rel="stylesheet" href="/static/style.css"> 
+        </head>
+        <header class="head">
+          <nav>
+            <img src="/static/spd logo.png" class="logo">
+            <ul>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/index">Works</a></li>
+              <li><a href="#">Contacts</a></li>
+                
+            </ul>
+            <div>
+              <a href="#" class="login-btn">Log in</a>
+              <a href="#" class="btn">Suggestions?</a>
+            </div>
+          </nav>
+        </header>
+<body>
+    <div class="hero1">
+        <div >
+            <video autoplay muted loop class="bg-pic">
+                <source src="/static/Circles Bg.mp4" type="video/mp4">
+            </video>
+
+        </div>
+        <div class="content">
+        <h1 class="Anim">Calculate the <br>Area of the circle</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="#" method="post">
+            <label for="Radius">Enter the Radius:</label>
+            <input type="number" id="Radius" name="Radius" placeholder="1" size="1000">
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Calculate" class="btn1">
+        </form>
+        <br>
+        <br>
+        {% if AreaofCircle %}
+        <p class="Anim">Calculated Area: {{ AreaofCircle }}</p>
+        {% endif %}
+    </div>
+    </div>
+</body>
+</html>

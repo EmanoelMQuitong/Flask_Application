@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+        <title> MyWebsite - Pyflask Introduction To Website</title>
+        <link rel="stylesheet" href="/static/style.css"> 
+        </head>
+        <header class="head">
+          <nav>
+            <img src="/static/spd logo.png" class="logo">
+            <ul>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/index">Works</a></li>
+              <li><a href="#">Contacts</a></li>
+                
+            </ul>
+            <div>
+              <a href="#" class="login-btn">Log in</a>
+              <a href="#" class="btn">Suggestions?</a>
+            </div>
+          </nav>
+        </header>
+<body>
+    <div class="hero1">
+        <div >
+            <video autoplay muted loop class="bg-pic">
+                <source src="/static/Triangles Bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="content">
+            <h1 class="Anim">Calculate the <br> Area of the Triangle</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form action="/AreaOfTriangle" method="post">
+                <label for="Base">Enter the Base:</label>
+                <input type="number" id="Base" name="Base" placeholder="1">
+                <br>
+                <br>
+                <br>
+                <label for="Height">Enter the Height:</label>
+                <input type="number" id="Height" name="Height" placeholder="1">
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Calculate" class="btn1">
+            </form>
+            <br>
+            <br>
+            <br>
+            {% if AreaofTriangle %}
+            <p class="Anim">Calculated Area: {{ AreaofTriangle }}</p>
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+</html>
